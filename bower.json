@@ -1,0 +1,15 @@
+{
+  "name": "angular-playground",
+  "version": "0.0.1",
+  "main": "app/",
+  "ignore": [
+    "/node_dependencies"
+  ],
+  "dependencies": {
+    "angular": "~1.2.25",
+    "angular-route": "~1.2.25",
+    "angular-bootstrap": "~0.11.0",
+    "bootstrap-css-only": "~3.2.0"
+  },
+  "devDependencies": {}
+}
