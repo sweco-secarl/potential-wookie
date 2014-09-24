@@ -14,7 +14,8 @@ module.exports = function(grunt) {
                 options: {
                     port: 9000,
                     hostname: "0.0.0.0",
-                    bases: ['app']
+                    bases: ['app'],
+					livereload: true
                 }
             }
         },
@@ -26,6 +27,15 @@ module.exports = function(grunt) {
                 path: 'http://localhost:<%= express.all.options.port%>'
             }
         },
+		
+		watch: {
+			all: {
+				files: ['app/**/*.*'],
+				options: {
+					livereload: true,
+				}
+			}
+		},
 
         wiredep: {
             target: {
@@ -42,6 +52,7 @@ module.exports = function(grunt) {
     grunt.registerTask('server', [
         'express',
         'open',
+		'watch',
         'express-keepalive'
     ]);
 };
